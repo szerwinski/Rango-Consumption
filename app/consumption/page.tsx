@@ -43,7 +43,7 @@ function Consumption() {
     useEffect(() => {
         if (!id) return;
 
-        axios.get(`https://api.rangosemfila.com.br/v2/clientsConsumptionReport?id=${id}`)
+        axios.get(`https://api.rangosemfila.com.br/v2/clientsConsumptionReport?id=${id}&readOnly=true`)
             .then(response => {
                 if (response.data) {
                     setData(response.data);
